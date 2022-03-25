@@ -8,7 +8,7 @@ const Main = ({ articles }) => {
       <MainTitle>Lorem ipsum lorem ipsum</MainTitle>
       <Articles>
         {articles.map((articles) => (
-         <Article {...articles} key={articles.id}/>
+          <Article {...articles} key={articles.id} />
         ))}
       </Articles>
     </Wrapper>

@@ -14,14 +14,23 @@ export const WhiteBox = styled.div`
   box-shadow: 0 3.75rem 5rem -1.875rem rgb(0 0 0 / 5%);
   display: flex;
   flex-direction: column;
-  padding: 78px;
+  padding: 35px;
   cursor: pointer;
+  width: 70%;
+  position: absolute;
+  bottom: -30px;
+  left: 30px;
 `;
 
-export const DateAdded = styled.p`
+export const DateAdded = styled.span`
   color: ${({ theme }) => theme.colors.gray};
   margin-bottom: 18px;
   font-size: 12px;
+`;
+
+export const BoxTitle = styled.h2`
+  font-size: 40px;
+  position: relative;
 `;
 
 export const ShortDescription = styled.p`

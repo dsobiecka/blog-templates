@@ -1,13 +1,12 @@
 import PropTypes from 'prop-types';
-import { Wrapper, WhiteBox, DateAdded, ShortDescription } from './Article.styles';
-import { MainTitle } from '../Main.styles';
+import { Wrapper, WhiteBox, DateAdded, ShortDescription, BoxTitle } from './Article.styles';
 
 const Article = (props) => {
   return (
     <Wrapper className={`box box${props.id}`}>
-      <WhiteBox>
+      <WhiteBox imgUrl={props.img}>
         <DateAdded>{props.data}</DateAdded>
-        <MainTitle>{props.title}</MainTitle>
+        <BoxTitle>{props.title}</BoxTitle>
         <ShortDescription>{props.shortDescription}</ShortDescription>
       </WhiteBox>
     </Wrapper>
