@@ -1,14 +1,28 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+import { Nav } from './Navigation.styles';
+import { useState } from 'react';
 
 const Navigation = () => {
   return (
-    <nav>
+    <Nav>
       <ul>
-        <Link to="/">Home</Link>
-        <Link to="/blog">Blog</Link>
-        <Link to="/about">About</Link>
+        <li>
+          <NavLink to="/" className={(navData) => (navData.isActive ? 'active' : '')}>
+            Home
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/blog" className={(navData) => (navData.isActive ? 'active' : '')}>
+            Blog
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/about" className={(navData) => (navData.isActive ? 'active' : '')}>
+            About
+          </NavLink>
+        </li>
       </ul>
-    </nav>
+    </Nav>
   );
 };
 

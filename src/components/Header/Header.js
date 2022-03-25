@@ -1,13 +1,14 @@
 import PropTypes from 'prop-types';
 import Navigation from './Navigation/Navigation';
-import ThemesColors from './ThemesColors/ThemesColors';
+import ThemeSwitch from './ThemeSwitch/ThemeSwitch';
+import {Wrapper} from './Header.styles';
 
 const Header = () => {
   return (
-    <>
+    <Wrapper>
       <Navigation />
-      <ThemesColors />
-    </>
+      <ThemeSwitch />
+    </Wrapper>
   );
 };
 

@@ -1,11 +1,17 @@
 import PropTypes from 'prop-types';
+import { MainTitle, Wrapper, Articles } from './Main.styles';
+import Article from './Article/Article';
 
-const Main = () => {
+const Main = ({ articles }) => {
   return (
-    <div>
-      <h1>Title</h1>
-      <p>some picture</p>
-    </div>
+    <Wrapper>
+      <MainTitle>Lorem ipsum lorem ipsum</MainTitle>
+      <Articles>
+        {articles.map((articles) => (
+         <Article {...articles} key={articles.id}/>
+        ))}
+      </Articles>
+    </Wrapper>
   );
 };
 
