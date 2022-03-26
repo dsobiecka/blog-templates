@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
-export const MainTitle = styled.h2`
+export const MainTitle = styled.p`
   font-size: ${({ theme }) => theme.fontSize.ld};
   position: relative;
   :before {
     content: '';
     background-color: #efe960;
-    width: 70%;
+    width: 50%;
     height: 20%;
     position: absolute;
     left: 0;
@@ -17,7 +17,7 @@ export const MainTitle = styled.h2`
 `;
 
 export const Wrapper = styled.div`
-  padding: 6rem 1.5rem 2.2rem 1.5rem;
+  padding: 5rem 1.5rem 2.2rem 1.5rem;
 `;
 
 export const Articles = styled.div`

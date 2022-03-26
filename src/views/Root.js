@@ -3,10 +3,12 @@ import { ThemeProvider } from 'styled-components';
 import { GlobalStyle } from '../assets/styles/GlobalStyle';
 import Header from '../components/Header/Header';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { articles } from '../data/articles';
+
 import Main from '../components/Main/Main';
 import Blog from '../components/Blog/Blog';
 import About from '../components/About/About';
-import { articles } from '../data/articles';
+import Footer from '../components/Footer/Footer';
 
 function Root() {
   return (
@@ -19,6 +21,7 @@ function Root() {
           <Route path="/blog" element={<Blog />} />
           <Route path="/about" element={<About />} />
         </Routes>
+        <Footer />
       </ThemeProvider>
     </Router>
   );
