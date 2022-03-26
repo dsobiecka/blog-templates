@@ -9,12 +9,14 @@ import Main from '../components/Main/Main';
 import Blog from '../components/Blog/Blog';
 import About from '../components/About/About';
 import Footer from '../components/Footer/Footer';
+import ProgressBar from './ProgressBar/ProgressBar';
 
 function Root() {
   return (
     <Router>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
+        <ProgressBar />
         <Header />
         <Routes>
           <Route path="/" element={<Main articles={articles} />} />

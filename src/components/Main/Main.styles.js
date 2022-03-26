@@ -1,5 +1,15 @@
 import styled from 'styled-components';
 
+export const Wrapper = styled.div`
+  padding: 5rem 1.5rem 10rem 1.5rem;
+`;
+
+export const Row = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;
+
 export const MainTitle = styled.p`
   font-size: ${({ theme }) => theme.fontSize.ld};
   position: relative;
@@ -14,10 +24,6 @@ export const MainTitle = styled.p`
     transform: rotate(-1deg);
     z-index: -1;
   }
-`;
-
-export const Wrapper = styled.div`
-  padding: 5rem 1.5rem 2.2rem 1.5rem;
 `;
 
 export const Articles = styled.div`

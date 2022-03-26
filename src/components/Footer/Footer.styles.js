@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
-  border-top: 1px solid ${({ theme }) => theme.colors.gray};
+  border-top: 1px solid ${({ theme }) => theme.colors.grey};
   display: flex;
   align-items: center;
   justify-content: space-between;
