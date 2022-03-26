@@ -1,5 +1,5 @@
 import { Facebook, Instagram, LinkedIn, Twitter } from '@material-ui/icons';
-import {Wrapper} from './SocialMedia.styled';
+import { Wrapper } from './SocialMedia.styled';
 
 const SocialMedia = () => {
   return (

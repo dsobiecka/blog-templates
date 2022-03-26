@@ -3,7 +3,7 @@
 This project was bootstrapped with [Create React Root](https://github.com/facebook/create-react-app).
 
 ## Methods used
-In this project I used React Router 6, Css Grid
+In this project I used React Router 6, Css Grid, @material-ui, 
 
 
 ## Available Scripts
