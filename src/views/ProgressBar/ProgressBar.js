@@ -38,7 +38,7 @@ const ProgressBar = () => {
       const scrollLength = document.documentElement.scrollHeight - document.documentElement.clientHeight;
       const progress = `${(100 * scrolled) / scrollLength}`;
 
-      setProgress(progress);
+      setProgress(parseInt(progress));
     };
     window.addEventListener('scroll', computeProgress);
 

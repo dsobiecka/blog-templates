@@ -3,12 +3,16 @@ import { MainTitle, Wrapper, Articles, Row } from './Main.styles';
 import Article from './Article/Article';
 import Search from './Search/Search';
 
+const SearchHandler = (inputText) => {
+  console.log('szukaj z main', inputText);
+};
+
 const Main = ({ articles }) => {
   return (
     <Wrapper>
       <Row>
         <MainTitle>Lorem ipsum lorem ipsum</MainTitle>
-        <Search />
+        <Search onSearch={SearchHandler} />
       </Row>
 
       <Articles>
@@ -20,6 +24,8 @@ const Main = ({ articles }) => {
   );
 };
 
-Main.propTypes = {};
+Main.propTypes = {
+  articles: PropTypes.array.isRequired,
+};
 
 export default Main;

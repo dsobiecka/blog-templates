@@ -13,6 +13,11 @@ const Article = (props) => {
   );
 };
 
-Article.propTypes = {};
+Article.propTypes = {
+  data: PropTypes.string.isRequired,
+  img: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  shortDescription: PropTypes.string,
+};
 
 export default Article;

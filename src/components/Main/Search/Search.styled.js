@@ -16,6 +16,24 @@ export const Form = styled.form`
     color: ${({ theme }) => theme.colors.darkGrey};
   }
 
+  button {
+    position: absolute;
+    right: 0;
+    width: auto;
+    height: 100%;
+    border-radius: 3rem;
+    padding: 0 2rem;
+    background-color: ${({ theme }) => theme.colors.darkGrey};
+    color: ${({ theme }) => theme.colors.white};
+    border: none;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    &:hover {
+      box-shadow: 0 0 10px ${({ theme }) => theme.colors.grey};
+    }
+  }
+
   input {
     font-size: 1.125rem;
     padding-left: 5.25rem;
