@@ -1,17 +1,23 @@
 import PropTypes from 'prop-types';
-import icon from '../../../assets/icons/sun_moon.svg';
 import { SwitchIcon } from './ThemeSwitch.styles';
 
-const ThemeSwitch = () => {
+const ThemeSwitch = (props) => {
+  const changeTheme = () => {
+    props.onChangeColors();
+  };
+
   return (
-    <SwitchIcon>
-      <div>
-        <img src={icon} alt="sun_and_moon" />
-      </div>
+    <SwitchIcon onClick={changeTheme}>
+      <label>
+        <input type="checkbox" />
+        <span />
+      </label>
     </SwitchIcon>
   );
 };
 
-ThemeSwitch.propTypes = {};
+ThemeSwitch.propTypes = {
+  onChangeColors: PropTypes.func.isRequired,
+};
 
 export default ThemeSwitch;

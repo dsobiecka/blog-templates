@@ -13,6 +13,8 @@ export const GlobalStyle = createGlobalStyle`
   
   body {
     font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    background-color: ${(layoutColor) => layoutColor.theme.body};
   }
   
   a, button {

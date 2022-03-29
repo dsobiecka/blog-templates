@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
-  padding: 5rem 1.5rem 10rem 1.5rem;
+  padding: 5rem 3.5rem 10rem 3.5rem;
 `;
 
 export const Row = styled.div`
@@ -11,11 +11,12 @@ export const Row = styled.div`
 `;
 
 export const MainTitle = styled.p`
-  font-size: ${({ theme }) => theme.fontSize.ld};
+  font-size: 60px;
   position: relative;
+  color: ${(layoutColor) => layoutColor.theme.fontColor};
   :before {
     content: '';
-    background-color: #efe960;
+    background-color: ${(layoutColor) => layoutColor.theme.yellow};
     width: 50%;
     height: 20%;
     position: absolute;

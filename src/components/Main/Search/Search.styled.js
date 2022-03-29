@@ -13,7 +13,7 @@ export const Form = styled.form`
     height: 1.5rem;
     left: 2.25rem;
     top: calc(50% - 0.75rem);
-    color: ${({ theme }) => theme.colors.darkGrey};
+    color: #737c8e;
   }
 
   button {
@@ -23,14 +23,14 @@ export const Form = styled.form`
     height: 100%;
     border-radius: 3rem;
     padding: 0 2rem;
-    background-color: ${({ theme }) => theme.colors.darkGrey};
-    color: ${({ theme }) => theme.colors.white};
+    background-color: #737c8e;
+    color: white;
     border: none;
     text-transform: uppercase;
     cursor: pointer;
 
     &:hover {
-      box-shadow: 0 0 10px ${({ theme }) => theme.colors.grey};
+      box-shadow: 0 0 10px #c0c7d6;
     }
   }
 
@@ -45,13 +45,13 @@ export const Form = styled.form`
     border-radius: 3rem;
     padding-right: 1.125rem;
     transition: all 0.2s cubic-bezier(0.76, 0, 0.24, 1);
-    color: ${({ theme }) => theme.colors.darkGrey};
+    color: #737c8e;
 
     &:focus {
       outline: none;
-      border-color: ${({ theme }) => theme.colors.grey};
-      box-shadow: 0 0 10px ${({ theme }) => theme.colors.grey};
-      background-color: ${({ theme }) => theme.colors.white};
+      border-color: #c0c7d6;
+      box-shadow: 0 0 10px #c0c7d6;
+      background-color: white;
     }
   }
 `;

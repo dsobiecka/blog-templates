@@ -1,17 +1,19 @@
 import PropTypes from 'prop-types';
 import Navigation from './Navigation/Navigation';
 import ThemeSwitch from './ThemeSwitch/ThemeSwitch';
-import {Wrapper} from './Header.styles';
+import { Wrapper } from './Header.styles';
 
-const Header = () => {
+const Header = (props) => {
   return (
     <Wrapper>
       <Navigation />
-      <ThemeSwitch />
+      <ThemeSwitch onChangeColors={props.onChangeColors} />
     </Wrapper>
   );
 };
 
-Header.propTypes = {};
+Header.propTypes = {
+  onChangeColors: PropTypes.func.isRequired,
+};
 
 export default Header;
