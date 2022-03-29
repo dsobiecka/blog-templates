@@ -21,7 +21,7 @@ const StyledLinearProgress = withStyles({
   },
 
   barColorPrimary: {
-    backgroundColor: `${(layoutColor) => layoutColor.theme.yellow}`,
+    backgroundColor: '#969242',
   },
 })(LinearProgress);
 

@@ -8,7 +8,6 @@ export const Nav = styled.nav`
   padding-left: 1.25rem;
   z-index: 101;
   border-bottom: 1px solid ${(layoutColor) => layoutColor.theme.border};
-  transition: all 0.2s cubic-bezier(0.76, 0, 0.24, 1);
 
   > ul {
     display: flex;

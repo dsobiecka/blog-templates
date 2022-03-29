@@ -7,10 +7,10 @@ const ThemeSwitch = (props) => {
   };
 
   return (
-    <SwitchIcon onClick={changeTheme}>
+    <SwitchIcon>
       <label>
         <input type="checkbox" />
-        <span />
+        <span onClick={changeTheme} />
       </label>
     </SwitchIcon>
   );

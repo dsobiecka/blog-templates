@@ -12,7 +12,7 @@ const Search = (props) => {
     <Form action="">
       <SearchIcon className="searchIcon" />
       <input type="text" value={inputText} placeholder="search" onChange={inputTextHandler} onKeyDown={inputKeyDownHandler} />
-      <button>Search</button>
+      <a></a>
     </Form>
   );
 };

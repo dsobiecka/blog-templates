@@ -38,8 +38,8 @@ export const Form = styled.form`
     font-size: 1.125rem;
     padding-left: 5.25rem;
     height: 4.5rem;
-    background-color: #f2f2f2;
-    border: 1px solid #f2f2f2;
+    background-color: ${(layoutColor) => layoutColor.theme.imgBcg};
+    border: 1px solid ${(layoutColor) => layoutColor.theme.imgBcg};
     background-repeat: no-repeat;
     width: 100%;
     border-radius: 3rem;
@@ -49,9 +49,9 @@ export const Form = styled.form`
 
     &:focus {
       outline: none;
-      border-color: #c0c7d6;
-      box-shadow: 0 0 10px #c0c7d6;
-      background-color: white;
+      border-color: ${(layoutColor) => layoutColor.theme.imgBcg};
+      box-shadow: 0 0 10px ${(layoutColor) => layoutColor.theme.imgBcg};
+      background-color: ${(layoutColor) => layoutColor.theme.body};
     }
   }
 `;
