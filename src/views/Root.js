@@ -11,6 +11,7 @@ import About from '../components/About/About';
 import Footer from '../components/Footer/Footer';
 import ProgressBar from './ProgressBar/ProgressBar';
 import { useEffect, useState } from 'react';
+import Loading from './Loading/Loading';
 
 const mockAPI = (success) => {
   return new Promise((resolve, reject) => {
@@ -47,7 +48,7 @@ function Root() {
   return (
     <Router>
       {loadingSpinner ? (
-        'Loading...'
+        <Loading />
       ) : (
         <ThemeProvider theme={theme === 'light' ? lightColors : darkColors}>
           <GlobalStyle />

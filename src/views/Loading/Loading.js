@@ -1,11 +1,16 @@
-import PropTypes from 'prop-types';
+import { Blocks } from './Loading.styles';
 
 const Loading = () => {
-    return (
-        <div></div>
-    )
+  return (
+    <Blocks>
+      <div id="blocks">
+        <div className="b" id="b1"></div>
+        <div className="b" id="b2"></div>
+        <div className="b" id="b3"></div>
+        <div className="b" id="b4"></div>
+      </div>
+    </Blocks>
+  );
 };
-
-Loading.propTypes = {};
 
 export default Loading;
