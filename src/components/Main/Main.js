@@ -14,9 +14,8 @@ const Main = ({ articles }) => {
         <MainTitle>Lorem ipsum lorem ipsum</MainTitle>
         <Search onSearch={SearchHandler} />
       </Row>
-
       <Articles>
-        {articles.map((articles) => (
+        {articles.slice(0, 7).map((articles) => (
           <Article {...articles} key={articles.id} />
         ))}
       </Articles>

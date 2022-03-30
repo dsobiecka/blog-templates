@@ -130,7 +130,7 @@ export const Articles = styled.div`
 
   @media (min-width: 1024px) {
     grid-template-columns: repeat(8, auto);
-    grid-template-rows: repeat(12, auto);
+    grid-template-rows: repeat(8, auto);
     grid-template-areas:
       'box-1 box-1 box-1 box-1 box-1 box-1 box-1 box-1'
       'box-1 box-1 box-1 box-1 box-1 box-1 box-1 box-1'
@@ -139,11 +139,7 @@ export const Articles = styled.div`
       'box-4 box-4 box-4 box-4 box-4 box-4 box-5 box-5'
       'box-4 box-4 box-4 box-4 box-4 box-4 box-5 box-5 '
       'box-6 box-6 box-7 box-7 box-7 box-7 box-7 box-7'
-      'box-6 box-6 box-7 box-7 box-7 box-7 box-7 box-7'
-      'box-8 box-8 box-8 box-8 box-8 box-8 box-9 box-9'
-      'box-8 box-8 box-8 box-8 box-8 box-8 box-9 box-9'
-      'box-10 box-10 box-11 box-11 box-11 box-11 box-11 box-11'
-      'box-10 box-10 box-11 box-11 box-11 box-11 box-11 box-11';
+      'box-6 box-6 box-7 box-7 box-7 box-7 box-7 box-7';
 
     .box {
       p {

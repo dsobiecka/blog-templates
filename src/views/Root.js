@@ -10,9 +10,34 @@ import Blog from '../components/Blog/Blog';
 import About from '../components/About/About';
 import Footer from '../components/Footer/Footer';
 import ProgressBar from './ProgressBar/ProgressBar';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+
+const mockAPI = (success) => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if (articles) {
+        resolve([...articles]);
+      } else {
+        reject({ message: 'Error' });
+      }
+    }, 2000);
+  });
+};
 
 function Root() {
+  const [loadingSpinner, setLoadingSpinner] = useState(true);
+  const [loadingArticle, setLoadingArticle] = useState(articles);
+
+  useEffect(() => {
+    setLoadingSpinner(true);
+    mockAPI()
+      .then(() => {
+        setLoadingArticle(loadingArticle);
+        setLoadingSpinner(false);
+      })
+      .catch((err) => console.log(err));
+  }, [loadingArticle]);
+
   const [theme, setTheme] = useState('light');
   const toogleTheme = () => {
     theme === 'light' ? setTheme('dark') : setTheme('light');
@@ -21,17 +46,21 @@ function Root() {
 
   return (
     <Router>
-      <ThemeProvider theme={theme === 'light' ? lightColors : darkColors}>
-        <GlobalStyle />
-        <ProgressBar />
-        <Header onChangeColors={toogleTheme} />
-        <Routes>
-          <Route path="/" element={<Main articles={articles} />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/about" element={<About />} />
-        </Routes>
-        <Footer />
-      </ThemeProvider>
+      {loadingSpinner ? (
+        'Loading...'
+      ) : (
+        <ThemeProvider theme={theme === 'light' ? lightColors : darkColors}>
+          <GlobalStyle />
+          <ProgressBar />
+          <Header onChangeColors={toogleTheme} />
+          <Routes>
+            <Route path="/" element={<Main articles={articles} />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/about" element={<About />} />
+          </Routes>
+          <Footer />
+        </ThemeProvider>
+      )}
     </Router>
   );
 }
