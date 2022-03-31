@@ -6,6 +6,22 @@ export const Wrapper = styled.div`
   border-radius: 4.5px;
   background-color: ${(layoutColor) => layoutColor.theme.imgBcg};
   position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  &:after {
+    position: absolute;
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    content: '';
+    display: block;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}
 `;
 
 export const WhiteBox = styled.div`
@@ -20,6 +36,7 @@ export const WhiteBox = styled.div`
   position: absolute;
   bottom: -30px;
   left: 30px;
+  z-index: 1;
 `;
 
 export const DateAdded = styled.span`
@@ -32,6 +49,10 @@ export const BoxTitle = styled.h2`
   font-size: 40px;
   position: relative;
   color: ${(layoutColor) => layoutColor.theme.fontColor};
+
+  @media (max-width: 767px) {
+    font-size: 30px;
+  }
 `;
 
 export const ShortDescription = styled.p`

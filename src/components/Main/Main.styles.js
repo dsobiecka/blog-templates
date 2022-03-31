@@ -2,12 +2,20 @@ import styled from 'styled-components';
 
 export const Wrapper = styled.div`
   padding: 5rem 3.5rem 10rem 3.5rem;
+
+  @media (max-width: 840px) {
+    padding: 0rem 2rem 6rem 2rem;
+  }
 `;
 
 export const Row = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media (max-width: 840px) {
+    flex-direction: column;
+  }
 `;
 
 export const MainTitle = styled.p`
@@ -78,16 +86,11 @@ export const Articles = styled.div`
     }
 
     .box1 {
-      grid-column: 1/4;
+      grid-column: 1/7;
       grid-row: 1/5;
     }
 
     .box2 {
-      grid-column: 4/7;
-      grid-row: 1/5;
-    }
-
-    .box7 {
       grid-column: 1/4;
       grid-row: 5/9;
     }
@@ -97,47 +100,41 @@ export const Articles = styled.div`
       grid-row: 5/9;
     }
 
+    .box4 {
+      grid-column: 1/4;
+      grid-row: 9/10;
+    }
+
     .box5 {
-      grid-column: 1/3;
-      grid-row: 9/10;
-    }
-
-    .box9 {
-      grid-column: 3/5;
-      grid-row: 9/10;
-    }
-
-    .box8 {
-      grid-column: 5/7;
+      grid-column: 4/7;
       grid-row: 9/10;
     }
 
     .box6 {
-      grid-column: 1/3;
+      grid-column: 1/4;
       grid-row: 11/12;
     }
 
-    .box10 {
-      grid-column: 3/5;
-      grid-row: 11/12;
-    }
-
-    .box4 {
-      grid-column: 5/7;
+    .box7 {
+      grid-column: 4/7;
       grid-row: 11/12;
     }
   }
 
   @media (min-width: 1024px) {
     grid-template-columns: repeat(8, auto);
-    grid-template-rows: repeat(8, auto);
+    grid-template-rows: repeat(12, auto);
     grid-template-areas:
       'box-1 box-1 box-1 box-1 box-1 box-1 box-1 box-1'
       'box-1 box-1 box-1 box-1 box-1 box-1 box-1 box-1'
+      'box-1 box-1 box-1 box-1 box-1 box-1 box-1 box-1'
+      'box-2 box-2 box-3 box-3 box-3 box-3 box-3 box-3'
       'box-2 box-2 box-3 box-3 box-3 box-3 box-3 box-3'
       'box-2 box-2 box-3 box-3 box-3 box-3 box-3 box-3'
       'box-4 box-4 box-4 box-4 box-4 box-4 box-5 box-5'
-      'box-4 box-4 box-4 box-4 box-4 box-4 box-5 box-5 '
+      'box-4 box-4 box-4 box-4 box-4 box-4 box-5 box-5'
+      'box-4 box-4 box-4 box-4 box-4 box-4 box-5 box-5'
+      'box-6 box-6 box-7 box-7 box-7 box-7 box-7 box-7'
       'box-6 box-6 box-7 box-7 box-7 box-7 box-7 box-7'
       'box-6 box-6 box-7 box-7 box-7 box-7 box-7 box-7';
 
@@ -149,6 +146,7 @@ export const Articles = styled.div`
 
     .box1 {
       grid-area: box-1;
+      height: 600px;
     }
 
     .box2 {

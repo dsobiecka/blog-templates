@@ -1,3 +1,4 @@
+import React from 'react';
 import PropTypes from 'prop-types';
 import { MainTitle, Wrapper, Articles, Row } from './Main.styles';
 import Article from './Article/Article';
@@ -27,4 +28,8 @@ Main.propTypes = {
   articles: PropTypes.array.isRequired,
 };
 
-export default Main;
+/*const areEqual = (prevProps, nextProps) => {
+  return prevProps.articles === nextProps.articles;
+};*/
+
+export default React.memo(Main );

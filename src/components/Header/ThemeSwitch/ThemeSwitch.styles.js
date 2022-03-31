@@ -4,6 +4,12 @@ export const SwitchIcon = styled.div`
   padding-bottom: 1rem;
   border-bottom: 1px solid #c0c7d6;
 
+  @media (max-width: 850px) {
+    padding-bottom: 0;
+    border-bottom: none;
+    padding-top: 2rem;
+  }
+
   label {
     position: relative;
     display: inline-block;

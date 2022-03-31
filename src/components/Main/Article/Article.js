@@ -3,8 +3,8 @@ import { Wrapper, WhiteBox, DateAdded, ShortDescription, BoxTitle } from './Arti
 
 const Article = (props) => {
   return (
-    <Wrapper className={`box box${props.id}`}>
-      <WhiteBox imgUrl={props.img}>
+    <Wrapper className={`box box${props.id}`} style={{ backgroundImage: `url(${props.img})` }}>
+      <WhiteBox>
         <DateAdded>{props.data}</DateAdded>
         <BoxTitle>{props.title}</BoxTitle>
         <ShortDescription>{props.shortDescription}</ShortDescription>

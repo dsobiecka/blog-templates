@@ -7,6 +7,10 @@ export const Form = styled.form`
   align-items: center;
   position: relative;
 
+  @media (max-width: 840px) {
+    margin-bottom: 3rem;
+  }
+
   .searchIcon {
     position: absolute;
     width: 1.5rem;
