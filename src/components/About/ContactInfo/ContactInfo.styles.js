@@ -3,6 +3,12 @@ import styled from 'styled-components';
 export const Wrapper = styled.div`
   width: 40%;
   max-width: 40%;
+
+  @media (max-width: 1024px) {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 2rem;
+  }
 `;
 
 export const ContactItem = styled.div`

@@ -5,7 +5,7 @@ const Article = (props) => {
   return (
     <Wrapper className={`box box${props.id}`} style={{ backgroundImage: `url(${props.img})` }}>
       <WhiteBox>
-        <DateAdded>{props.data}</DateAdded>
+        <DateAdded>{props.data.toISOString()}</DateAdded>
         <BoxTitle>{props.title}</BoxTitle>
         <ShortDescription>{props.shortDescription}</ShortDescription>
       </WhiteBox>

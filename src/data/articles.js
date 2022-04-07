@@ -5,7 +5,7 @@ import img3 from '../assets/img/notowar.jpg';
 export const articles = [
   {
     id: 1,
-    data: '2020/08/12',
+    data: new Date(2020, 1, 4),
     title: 'Lorem ipsum',
     shortDescription:
       'Lorem Ipsum is simply dummy text of the printing and typesetting industry. ' +
@@ -16,7 +16,7 @@ export const articles = [
   },
   {
     id: 2,
-    data: '2020/04/20',
+    data: new Date(2020, 4, 20),
     title: 'Lorem ipsum',
     shortDescription:
       'Lorem Ipsum is simply dummy text of the printing and typesetting industry. ' +
@@ -27,7 +27,7 @@ export const articles = [
   },
   {
     id: 3,
-    data: '2021/01/21',
+    data: new Date(2021, 1, 21),
     title: 'Lorem ipsum',
     shortDescription:
       'Lorem Ipsum is simply dummy text of the printing and typesetting industry. ' +
@@ -38,7 +38,7 @@ export const articles = [
   },
   {
     id: 4,
-    data: '2021/02/22',
+    data: new Date(2021, 2, 22),
     title: 'Lorem ipsum',
     shortDescription:
       'Lorem Ipsum is simply dummy text of the printing and typesetting industry. ' +
@@ -49,7 +49,7 @@ export const articles = [
   },
   {
     id: 5,
-    data: '2021/03/12',
+    data: new Date(2021, 3, 12),
     title: 'Lorem ipsum',
     shortDescription:
       'Lorem Ipsum is simply dummy text of the printing and typesetting industry. ' +
@@ -60,7 +60,7 @@ export const articles = [
   },
   {
     id: 6,
-    data: '2021/05/16',
+    data: new Date(2021, 5, 16),
     title: 'Lorem ipsum',
     shortDescription:
       'Lorem Ipsum is simply dummy text of the printing and typesetting industry. ' +
@@ -71,7 +71,7 @@ export const articles = [
   },
   {
     id: 7,
-    data: '2021/06/07',
+    data: new Date(2021, 6, 7),
     title: 'Lorem ipsum',
     shortDescription:
       'Lorem Ipsum is simply dummy text of the printing and typesetting industry. ' +
@@ -82,7 +82,7 @@ export const articles = [
   },
   {
     id: 8,
-    data: '2021/09/10',
+    data: new Date(2021, 9, 10),
     title: 'Lorem ipsum',
     shortDescription:
       'Lorem Ipsum is simply dummy text of the printing and typesetting industry. ' +
@@ -93,7 +93,7 @@ export const articles = [
   },
   {
     id: 9,
-    data: '2021/11/22',
+    data: new Date(2021, 11, 22),
     title: 'Lorem ipsum',
     shortDescription:
       'Lorem Ipsum is simply dummy text of the printing and typesetting industry. ' +
@@ -104,7 +104,7 @@ export const articles = [
   },
   {
     id: 10,
-    data: '2022/01/10',
+    data: new Date(2022, 1, 10),
     title: 'Lorem ipsum',
     shortDescription:
       'Lorem Ipsum is simply dummy text of the printing and typesetting industry. ' +
@@ -115,7 +115,7 @@ export const articles = [
   },
   {
     id: 11,
-    data: '2022/02/15',
+    data: new Date(2022, 2, 15),
     title: 'Lorem ipsum',
     shortDescription:
       'Lorem Ipsum is simply dummy text of the printing and typesetting industry. ' +
