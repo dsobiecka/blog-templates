@@ -56,7 +56,7 @@ function Root() {
           <Header onChangeColors={toogleTheme} />
           <Routes>
             <Route path="/" element={<Main articles={articles} />} />
-            <Route path="/blog" element={<Blog />} />
+            <Route path="/blog" element={<Blog articles={articles} />} />
             <Route path="/about" element={<About />} />
           </Routes>
           <Footer />
