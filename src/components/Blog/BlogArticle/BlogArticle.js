@@ -1,6 +1,7 @@
-import PropTypes from 'prop-types';
+import { useParams } from 'react-router-dom';
 
-const BlogArticle = () => {
+const BlogArticle = (props) => {
+  const params = useParams();
   return (
     <div>tu bedzie cos</div>
   );
