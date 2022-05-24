@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types';
 import { Wrapper, DateAdded, ShortDescription } from './BlogBox.styles';
 import { Route } from 'react-router-dom';
-import Blog from '../Blog';
-import { articles } from '../../../data/articles';
+
+import BlogArticle from '../BlogArticle/BlogArticle';
 
 const BlogBox = (props) => {
   return (
-    <Route path='/blog/:id'>
+    <Route path='/blog/:id' element={<BlogArticle />}>
       <Wrapper className={`box box${props.id}`}>
         <DateAdded>{props.data.toISOString()}</DateAdded>
         <ShortDescription>{props.shortDescription}</ShortDescription>
