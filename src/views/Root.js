@@ -12,6 +12,7 @@ import Footer from '../components/Footer/Footer';
 import ProgressBar from './ProgressBar/ProgressBar';
 import { useEffect, useState } from 'react';
 import Loading from './Loading/Loading';
+import BlogArticle from '../components/Blog/BlogArticle/BlogArticle';
 
 const mockAPI = (success) => {
   return new Promise((resolve, reject) => {
@@ -55,9 +56,10 @@ function Root() {
           <ProgressBar />
           <Header onChangeColors={toogleTheme} />
           <Routes>
-            <Route path="/" element={<Main articles={articles} />} />
-            <Route path="/blog" element={<Blog articles={articles} />} />
-            <Route path="/about" element={<About />} />
+            <Route path='/' element={<Main articles={articles} />} />
+            <Route path='/blog' element={<Blog articles={articles} />} />
+            <Route path='/about' element={<About />} />
+            <Route path='/blogarticles/:articleId' element={<BlogArticle />} />
           </Routes>
           <Footer />
         </ThemeProvider>

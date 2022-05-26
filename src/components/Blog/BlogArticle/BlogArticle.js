@@ -1,9 +1,10 @@
 import { useParams } from 'react-router-dom';
 
-const BlogArticle = (props) => {
+const BlogArticle = () => {
   const params = useParams();
+
   return (
-    <div>tu bedzie cos</div>
+    <div>{params.articleId}</div>
   );
 };
 

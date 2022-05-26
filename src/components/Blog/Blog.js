@@ -3,6 +3,9 @@ import { Wrapper, BlogBoxes } from './Blog.styles';
 import { MainTitle } from '../Main/Main.styles';
 import React from 'react';
 import BlogBox from './BlogBox/BlogBox';
+import { articles } from '../../data/articles';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import BlogArticle from './BlogArticle/BlogArticle';
 
 const Blog = ({ articles }) => {
   return (

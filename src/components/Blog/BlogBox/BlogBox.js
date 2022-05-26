@@ -1,17 +1,15 @@
 import PropTypes from 'prop-types';
 import { Wrapper, DateAdded, ShortDescription } from './BlogBox.styles';
-import { Route } from 'react-router-dom';
-
-import BlogArticle from '../BlogArticle/BlogArticle';
+import { NavLink } from 'react-router-dom';
 
 const BlogBox = (props) => {
   return (
-
+    <NavLink to={`/blogarticles/${props.id}`}>
       <Wrapper className={`box box${props.id}`}>
         <DateAdded>{props.data.toISOString()}</DateAdded>
         <ShortDescription>{props.shortDescription}</ShortDescription>
       </Wrapper>
-
+    </NavLink>
   );
 };
 
