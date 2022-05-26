@@ -10,7 +10,9 @@ const Article = (props) => {
     <Wrapper className={`box box${props.id}`} style={{ backgroundImage: `url(${props.img})` }}>
       <WhiteBox>
         <DateAdded>
-          <div>{day}/{month}/{year}</div>
+          <div>
+            {day}/{month}/{year}
+          </div>
         </DateAdded>
         <BoxTitle>{props.title}</BoxTitle>
         <ShortDescription>{props.shortDescription}</ShortDescription>
@@ -23,7 +25,7 @@ Article.propTypes = {
   data: PropTypes.string.isRequired,
   img: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  shortDescription: PropTypes.string
+  shortDescription: PropTypes.string,
 };
 
 export default Article;

@@ -4,12 +4,12 @@ import { NavLink } from 'react-router-dom';
 
 const BlogBox = (props) => {
   return (
-    <NavLink to={`/blogarticles/${props.id}`}>
-      <Wrapper className={`box box${props.id}`}>
-        <DateAdded>{props.data.toISOString()}</DateAdded>
+    <Wrapper className={`box box${props.id}`}>
+      <DateAdded>{props.data.toISOString()}</DateAdded>
+      <NavLink to={`/blogarticles/${props.id}`}>
         <ShortDescription>{props.shortDescription}</ShortDescription>
-      </Wrapper>
-    </NavLink>
+      </NavLink>
+    </Wrapper>
   );
 };
 
@@ -17,7 +17,7 @@ BlogBox.propTypes = {
   data: PropTypes.string.isRequired,
   img: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  shortDescription: PropTypes.string
+  shortDescription: PropTypes.string,
 };
 
 export default BlogBox;

@@ -56,10 +56,10 @@ function Root() {
           <ProgressBar />
           <Header onChangeColors={toogleTheme} />
           <Routes>
-            <Route path='/' element={<Main articles={articles} />} />
-            <Route path='/blog' element={<Blog articles={articles} />} />
-            <Route path='/about' element={<About />} />
-            <Route path='/blogarticles/:articleId' element={<BlogArticle />} />
+            <Route path="/" element={<Main articles={articles} />} />
+            <Route path="/blog" element={<Blog articles={articles} />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/blogarticles/:articleId" element={<BlogArticle />} />
           </Routes>
           <Footer />
         </ThemeProvider>
