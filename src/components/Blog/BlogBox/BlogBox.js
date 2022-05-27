@@ -6,15 +6,16 @@ const BlogBox = (props) => {
   return (
     <Wrapper className={`box box${props.id}`}>
       <DateAdded>{props.data.toISOString()}</DateAdded>
+      <ShortDescription>{props.shortDescription}</ShortDescription>
       <NavLink to={`/blogarticles/${props.id}`}>
-        <ShortDescription>{props.shortDescription}</ShortDescription>
+        <button>...</button>
       </NavLink>
     </Wrapper>
   );
 };
 
 BlogBox.propTypes = {
-  data: PropTypes.string.isRequired,
+  data: PropTypes.number.isRequired,
   img: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   shortDescription: PropTypes.string,

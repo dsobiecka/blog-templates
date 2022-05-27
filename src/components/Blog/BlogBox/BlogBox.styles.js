@@ -9,7 +9,23 @@ export const Wrapper = styled.div`
   position: relative;
   margin: 0 2.75rem 6.25rem;
   padding: 3rem;
-  cursor: pointer;
+
+  a {
+    text-decoration: none;
+  }
+
+  button {
+    background-color: ${(layoutColor) => layoutColor.theme.yellow};
+    border: 1px solid ${(layoutColor) => layoutColor.theme.fontColorsB};
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    font-size: 1rem;
+    padding: 0.5rem 3rem;
+    border-radius: 4rem;
+    font-weight: 500;
+  }
 `;
 
 export const DateAdded = styled.span`
