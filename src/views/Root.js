@@ -13,6 +13,7 @@ import ProgressBar from './ProgressBar/ProgressBar';
 import { useEffect, useState } from 'react';
 import Loading from './Loading/Loading';
 import BlogArticle from '../components/Blog/BlogArticle/BlogArticle';
+import NotFound from './404/404';
 
 const mockAPI = (success) => {
   return new Promise((resolve, reject) => {
@@ -60,6 +61,7 @@ function Root() {
             <Route path="/blog" element={<Blog articles={articles} />} />
             <Route path="/about" element={<About />} />
             <Route path="/blogarticles/:articleId" element={<BlogArticle />} />
+            <Route element={<NotFound />} />
           </Routes>
           <Footer />
         </ThemeProvider>
