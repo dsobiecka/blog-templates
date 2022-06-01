@@ -1,4 +1,5 @@
 import { Container, PrefooterList } from './Prefooter.styles';
+import { NavLink } from 'react-router-dom';
 
 const Prefooter = () => {
   return (
@@ -11,7 +12,7 @@ const Prefooter = () => {
         </ul>
       </PrefooterList>
       <PrefooterList>
-          <h4>Documents</h4>
+        <h4>Documents</h4>
         <ul className="list-inner">
           <li className="nav-item">Regulations</li>
           <li className="nav-item">Privacy policy</li>
@@ -20,7 +21,9 @@ const Prefooter = () => {
       <PrefooterList>
         <h4>Admin area</h4>
         <ul className="list-inner">
-          <li className="nav-item">Login</li>
+          <li className="nav-item">
+            <NavLink to={`/login`}>Login</NavLink>
+          </li>
           <li className="nav-item">Lorem Ipsum</li>
         </ul>
       </PrefooterList>

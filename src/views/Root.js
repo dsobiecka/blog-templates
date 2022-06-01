@@ -15,6 +15,7 @@ import Loading from './Loading/Loading';
 import BlogArticle from '../components/Blog/BlogArticle/BlogArticle';
 import NotFound from './404/404';
 import Prefooter from '../components/Prefooter/Prefooter';
+import AuthContext from '../components/AuthContext/AuthContext';
 
 const mockAPI = (success) => {
   return new Promise((resolve, reject) => {
@@ -62,6 +63,7 @@ function Root() {
             <Route path="/blog" element={<Blog articles={articles} />} />
             <Route path="/about" element={<About />} />
             <Route path="/blogarticles/:articleId" element={<BlogArticle />} />
+            <Route path="/login" element={<AuthContext />} />
             <Route element={<NotFound />} />
           </Routes>
           <Prefooter />
