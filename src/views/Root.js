@@ -14,6 +14,7 @@ import { useEffect, useState } from 'react';
 import Loading from './Loading/Loading';
 import BlogArticle from '../components/Blog/BlogArticle/BlogArticle';
 import NotFound from './404/404';
+import Prefooter from '../components/Prefooter/Prefooter';
 
 const mockAPI = (success) => {
   return new Promise((resolve, reject) => {
@@ -63,6 +64,7 @@ function Root() {
             <Route path="/blogarticles/:articleId" element={<BlogArticle />} />
             <Route element={<NotFound />} />
           </Routes>
+          <Prefooter />
           <Footer />
         </ThemeProvider>
       )}
