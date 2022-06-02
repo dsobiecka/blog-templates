@@ -1,7 +1,7 @@
 import { Container, PrefooterList } from './Prefooter.styles';
 import { NavLink } from 'react-router-dom';
 
-const Prefooter = () => {
+const Prefooter = (props) => {
   return (
     <Container>
       <PrefooterList>
@@ -21,10 +21,17 @@ const Prefooter = () => {
       <PrefooterList>
         <h4>Admin area</h4>
         <ul className="list-inner">
-          <li className="nav-item">
-            <NavLink to={`/login`}>Login</NavLink>
-          </li>
-          <li className="nav-item">Lorem Ipsum</li>
+          {props.onLogout && (
+            <li className="nav-item">
+              <NavLink to={`/login`}>Login</NavLink>
+            </li>
+          )}
+
+          {props.isAuthenticated && (
+            <li>
+              <button onClick={props.onLogout}>Logout</button>
+            </li>
+          )}
         </ul>
       </PrefooterList>
     </Container>

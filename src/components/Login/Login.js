@@ -1,7 +1,7 @@
-import classes from './AuthContext.css';
+import classes from './Login.css';
 import { useState } from 'react';
 
-const AuthContext = (props) => {
+const Login = (props) => {
   const [enteredEmail, setEnteredEmail] = useState('');
   const [emailIsValid, setEmailIsValid] = useState();
   const [enteredPassword, setEnteredPassword] = useState('');
@@ -54,4 +54,4 @@ const AuthContext = (props) => {
   );
 };
 
-export default AuthContext;
+export default Login;

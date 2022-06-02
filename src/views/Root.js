@@ -15,7 +15,8 @@ import Loading from './Loading/Loading';
 import BlogArticle from '../components/Blog/BlogArticle/BlogArticle';
 import NotFound from './404/404';
 import Prefooter from '../components/Prefooter/Prefooter';
-import AuthContext from '../components/AuthContext/AuthContext';
+import Login from '../components/Login/Login';
+import ManageBlog from '../components/ManageBlog/ManageBlog';
 
 const mockAPI = (success) => {
   return new Promise((resolve, reject) => {
@@ -32,6 +33,15 @@ const mockAPI = (success) => {
 function Root() {
   const [loadingSpinner, setLoadingSpinner] = useState(true);
   const [loadingArticle, setLoadingArticle] = useState(articles);
+  const [isLoggedIn, setIsLogin] = useState(false);
+
+  const loginHandler = (email, password) => {
+    setIsLogin(true);
+  };
+
+  const logoutHandler = () => {
+    setIsLogin(false);
+  };
 
   useEffect(() => {
     setLoadingSpinner(true);
@@ -63,10 +73,10 @@ function Root() {
             <Route path="/blog" element={<Blog articles={articles} />} />
             <Route path="/about" element={<About />} />
             <Route path="/blogarticles/:articleId" element={<BlogArticle />} />
-            <Route path="/login" element={<AuthContext />} />
+            <Route path="/login" element={!isLoggedIn ? <Login onLogin={loginHandler} /> : <ManageBlog onLogout={logoutHandler} />} />
             <Route element={<NotFound />} />
           </Routes>
-          <Prefooter />
+          <Prefooter isAuthenticated={isLoggedIn} onLogout={logoutHandler} />
           <Footer />
         </ThemeProvider>
       )}
